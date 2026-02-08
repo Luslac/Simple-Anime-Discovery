@@ -23,22 +23,22 @@ export default function AnimeCard({id}) {
         <div className="text-white">
             <div className="max-w-5xl mx-auto">
                 
-                // Header
+                {/*Header*/}
                 <div className="flex gap-6 mb-8">
                     
-                    // Poster
+                    {/*Poster*/}
                     <img 
                         src={detailAnime.images.jpg.large_image_url} 
                         alt={detailAnime.title}
                         className="w-64 h-96 object-cover rounded-lg shadow-lg"
                     />
 
-                    // Main Info
+                    {/*Title*/}
                     <div className="flex-1">
                         <h1 className="text-4xl font-bold mb-2">{detailAnime.title}</h1>
                         <p className="text-gray-400 text-lg mb-4">{detailAnime.title_japanese}</p>
 
-                        // Stats
+                        {/*Stats*/}
                         <div className="grid grid-cols-2 gap-4 mb-4">
                             <div className="bg-gray-800 p-3 rounded">
                                 <p className="text-gray-400 text-sm">Score</p>
@@ -60,7 +60,7 @@ export default function AnimeCard({id}) {
                             </div>
                         </div>
 
-                        // Genres
+                        {/*Genres*/}
                         <div className="mb-4">
                             <p className="text-gray-400 text-sm mb-2">Genres</p>
                             <div className="flex flex-wrap gap-2">
@@ -75,7 +75,7 @@ export default function AnimeCard({id}) {
                             </div>
                         </div>
 
-                        // More Info
+                        {/*More Info*/}
                         <div className="space-y-2 text-sm">
                             <p><span className="text-gray-400">Type:</span> {detailAnime.type}</p>
                             <p><span className="text-gray-400">Studio:</span> {detailAnime.studios?.map(s => s.name).join(', ') || 'N/A'}</p>
@@ -85,13 +85,13 @@ export default function AnimeCard({id}) {
                     </div>
                 </div>
 
-                // Synopsis
+                {/*Synopsis*/}
                 <div className="bg-gray-800 p-6 rounded-lg mb-6">
                     <h2 className="text-2xl font-bold mb-4">Synopsis</h2>
                     <p className="text-gray-300 leading-relaxed">{detailAnime.synopsis}</p>
                 </div>
 
-                // Trailer
+                {/*Trailer*/}
                 {detailAnime.trailer?.embed_url && (
                     <div className="bg-gray-800 p-6 rounded-lg">
                         <h2 className="text-2xl font-bold mb-4">Trailer</h2>
